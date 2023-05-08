@@ -1,0 +1,37 @@
+<!--
+    Author: Bryan Hyland <bryan.hyland32@gmail.com>
+
+    This is a barebones page that displays the data held in the soil_moisture_data.txt file.
+    If you have multiple moisture sensors, the name of the data file can be changed within
+    the pico_data_web_server.py file (or whatever you rename the server file(s) to). If this
+    is done, the object tag needs to be duplicated and updated for each unique data file name.
+    Once updated and duplicated the page will display multiple moisture sensors readings
+    on the same page. These data file names need to match the file name in each server script that
+    is ran.
+
+    Example:
+    <div style="display: flex; flex-direction: column; align-items: center; justify-content: center;">
+        <object data="./tomato_moisture_data.txt">Placeholder Text</object>
+        <object data="./watermelon_moisture_data.txt">Placeholder Text</object>
+        <object data="./squash_moisture_data.txt">Placeholder Text</object>
+    </div>
+-->
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <!-- Refresh the page every 3.6 seconds for ~real time data updates -->
+        <meta http-equiv="refresh" content="3600" />
+        <title>Current Garden Soil Moisture Data</title>
+    </head>
+    <body>
+        <!-- Page Header -->
+        <h1>Current Garden Soil Moisture Level</h1>
+
+        <!-- Display the data from the soil_moisture_data.txt file -->
+        <div style="display:flex; flex-direction: column; align-items: center; justify-content: center;">
+            <object data="./soil_moisture_data.txt">Placeholder Text</object>
+        </div>
+    </body>
+</html>
